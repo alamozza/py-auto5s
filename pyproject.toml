@@ -1,0 +1,30 @@
+[project]
+name = "auto5s"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Hiroshi Mizokawa", email = "m301892@gmail.com" }
+]
+dependencies = [
+    "ffmpeg-python>=0.2.0",
+    "pillow>=10.2.0",
+]
+readme = "README.md"
+requires-python = ">= 3.11"
+
+[project.scripts]
+hello = "auto5s:hello"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/auto5s"]
